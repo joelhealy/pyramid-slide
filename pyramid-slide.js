@@ -29,6 +29,9 @@ brickSelect.addEventListener("change", determineHeightAndBrickAndThenDrawPyramid
 var pyramidSlider = document.getElementById("pyramidSlider");
 pyramidSlider.addEventListener("input", determineHeightAndBrickAndThenDrawPyramid);
 
+drawPyramid(8, '#');
+
+
 /**
  * drawPyramid
  *
@@ -56,7 +59,7 @@ pyramidSlider.addEventListener("input", determineHeightAndBrickAndThenDrawPyrami
          // build up a string for this row
          var rowStr = "";
          for (var i = 0; i < numSpaces; i++) {
-             rowStr += ".";
+             rowStr += "\u00A0";
          }
          for (var i = 0; i < numBricks; i++) {
              rowStr += brick;
